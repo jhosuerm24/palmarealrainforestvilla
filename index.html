@@ -5,14 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Palma Real Rainforest Villa</title>
 <meta name="description" content="30 homesites around a private park beneath Volcán Barú. A gated country community in Potrerillos Abajo, Chiriquí, Panama.">
-<script>
-try{var _l=localStorage.getItem('pr_lang');if(_l&&location.hash!=='#welcome'){document.documentElement.classList.add('nogate');document.documentElement.lang=_l}}catch(e){}
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; media-src 'self'; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; manifest-src 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<script src="assets/js/boot.js"></script>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/hanken-grotesk-latin-500-normal.woff2" crossorigin>
 <link rel="preload" as="image" href="assets/volcano-land.jpg">
 <style>
+/* Fonts are self-hosted: no third-party requests (Cormorant Garamond and Hanken Grotesk, SIL Open Font License) */
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300;font-display:swap;src:url(assets/fonts/cormorant-garamond-latin-300-normal.woff2) format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/cormorant-garamond-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/cormorant-garamond-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300;font-display:swap;src:url(assets/fonts/cormorant-garamond-latin-300-italic.woff2) format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-display:swap;src:url(assets/fonts/cormorant-garamond-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/hanken-grotesk-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/hanken-grotesk-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/hanken-grotesk-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/hanken-grotesk-latin-700-normal.woff2) format('woff2')}
+.founders div,.stat b,.lot-num{font-variant-numeric:lining-nums tabular-nums}
 :root{
   /* One visual world: rainforest night green, ivory type, sand accent taken from the master plan's road. */
   /* Layout idea: Apple-style product page. Language gate over the volcano, glass nav, cinematic pinned chapters (aerial orbit, 3D master plan), then calm bento sections. */
@@ -151,7 +161,7 @@ section{position:relative}
 .panel h2{font-size:clamp(30px,3vw,40px)}
 .panel>p{margin-top:12px;color:var(--mist);font-size:15.5px;line-height:1.5}
 .lot-now{margin-top:22px;padding-top:20px;border-top:1px solid var(--hair);display:grid;grid-template-columns:auto 1fr;gap:4px 18px;align-items:end}
-.lot-num{grid-row:span 2;font-family:var(--display);font-weight:300;font-size:84px;line-height:.8;letter-spacing:-.02em;font-variant-numeric:tabular-nums;min-width:1.25em}
+.lot-num{grid-row:span 2;font-family:var(--display);font-weight:300;font-size:84px;line-height:.8;letter-spacing:-.02em;font-variant-numeric:lining-nums tabular-nums;min-width:1.25em}
 .lot-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mist)}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .chip{font-size:12px;font-weight:600;padding:5px 10px;border-radius:99px;background:rgba(245,242,234,.1);color:var(--ivory)}
@@ -475,15 +485,15 @@ footer p{max-width:90ch}
       <p class="sub" data-t="rsP">The first homesites, closest to the paved road, go first at founder pricing. Join the reserve list and we'll book your private walk of the land, or a live video call with our family.</p>
       <div class="founders" aria-label="Founder homesites"><div>1</div><div>2</div><div>28</div><div>29</div></div>
       <p data-t="rsNote">Homesite numbers refer to the conceptual master plan.</p>
-      <p class="wa" style="margin-top:28px"><span data-t="rsWa">Prefer to message us now? WhatsApp</span> <a href="https://wa.me/50765348511" target="_blank" rel="noopener">+507 6534-8511</a></p>
+      <p class="wa" style="margin-top:28px"><span data-t="rsWa">Prefer to message us now? WhatsApp</span> <a href="https://wa.me/50765348511" target="_blank" rel="noopener noreferrer">+507 6534-8511</a></p>
     </div>
     <div>
       <form id="form" novalidate>
         <div class="row2">
-          <label for="fName"><span data-t="fN">Full name</span><input id="fName" name="name" autocomplete="name" required></label>
-          <label for="fCountry"><span data-t="fC">Country</span><input id="fCountry" name="country" autocomplete="country-name"></label>
+          <label for="fName"><span data-t="fN">Full name</span><input id="fName" name="name" autocomplete="name" required maxlength="80" spellcheck="false"></label>
+          <label for="fCountry"><span data-t="fC">Country</span><input id="fCountry" name="country" autocomplete="country-name" maxlength="56"></label>
         </div>
-        <label for="fEmail"><span data-t="fE">Email</span><input id="fEmail" name="email" type="email" autocomplete="email" required></label>
+        <label for="fEmail"><span data-t="fE">Email</span><input id="fEmail" name="email" type="email" autocomplete="email" required maxlength="120" spellcheck="false"></label>
         <label for="fLook"><span data-t="fL">I'm looking for</span>
           <select id="fLook" name="look">
             <option value="1" data-t="o1">A place to retire</option>
@@ -506,7 +516,7 @@ footer p{max-width:90ch}
         <p class="wa" data-t="dnP">Send this message on WhatsApp and our family will reply to book your visit. Nothing has been sent yet.</p>
         <pre id="msg"></pre>
         <div class="cta-row" style="justify-content:flex-start;margin-top:4px">
-          <a class="pill" id="waLink" href="https://wa.me/50765348511" target="_blank" rel="noopener" data-t="dnWa">Send on WhatsApp</a>
+          <a class="pill" id="waLink" href="https://wa.me/50765348511" target="_blank" rel="noopener noreferrer" data-t="dnWa">Send on WhatsApp</a>
           <button class="pill ghost" id="copyBtn" type="button" data-t="dnCopy">Copy message</button>
         </div>
         <p class="wa">WhatsApp: +507 6534-8511</p>
@@ -515,7 +525,7 @@ footer p{max-width:90ch}
   </div>
 </section>
 
-<a class="wa-fab" href="https://wa.me/50765348511" target="_blank" rel="noopener" aria-label="WhatsApp +507 6534-8511"><span class="wa-tip" data-t="fab">Chat with us</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></a>
+<a class="wa-fab" href="https://wa.me/50765348511" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +507 6534-8511"><span class="wa-tip" data-t="fab">Chat with us</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></a>
 
 <footer>
   <div class="wrap">
@@ -525,445 +535,9 @@ footer p{max-width:90ch}
   </div>
 </footer>
 
-<script>
-/* ---------- i18n (classic script: runs before first paint) ---------- */
-window.I18N=(function(){
-  const ES={
-    nav1:'La tierra',nav2:'Aérea',nav3:'Master plan',nav4:'Vivir aquí',nav5:'Panamá',nav6:'La familia',navCta:'Agenda una visita',
-    heroEyebrow:'Potrerillos Abajo · Chiriquí, Panamá',
-    heroLead:'Treinta lotes a lo largo de un parque arbolado, bajo el Volcán Barú.',
-    avH:'Volcán Barú',avS:'3,474 m · el pico más alto de Panamá',asH:'Y al sur, el mar.',asS:'El Pacífico, en el horizonte',fab:'Escríbenos',
-    heroCta:'Agenda una visita privada',heroMore:'Ver el master plan',heroFilmed:'Filmado en la propiedad, noviembre de 2026.',
-    landKicker:'La tierra',
-    orbitTag:'Tomas reales de dron · desliza para orbitar',orbitMeta:'Órbita aérea',
-    c1h:'Volcán Barú. 3,474 m.',c1p:'El pico más alto de Panamá, frente al terreno cada mañana.',
-    c2h:'Bosque por todos lados.',c2p:'El campo abierto está rodeado de árboles viejos. Ningún vecino mirando hacia adentro.',
-    c3h:'Y al sur, el mar.',c3p:'En días claros, el Pacífico dibuja el horizonte.',
-    c4h:'3.2 hectáreas, limpias y listas.',c4p:'En el campo abierto irán las 30 casas. El bosque y la quebrada se quedan como están.',
-    planH:'Tres parques en <span class="it">el centro.</span>',
-    planP:'La calle principal se abre alrededor de tres jardines alargados con árboles. Hay una sola fila de casas a cada lado: todas miran a los parques y su terraza trasera da a la quebrada o al bosque.',
-    lg1:'Lado quebrada',lg2:'Lado bosque',lg3:'Lote fundador',lg4:'Parques centrales',lg5:'Quebrada',lg6:'Sendero privado al río Majagua',
-    st1:'por lote',st2:'parques centrales arbolados',st3:'de parques y área verde',
-    planNote:'Master plan del arquitecto del proyecto, noviembre de 2026. Las áreas de los lotes salen del cuadro del arquitecto; los linderos en esta vista 3D son aproximados y están sujetos a levantamiento topográfico, permisos y aprobación del PH. Arrastra para mirar alrededor.',
-    livK:'Aquí, hoy',livH:'Naturaleza a la que puedes caminar <span class="it">esta mañana.</span>',
-    livP:'Cada foto de esta página es un cuadro de nuestras propias tomas del terreno y sus alrededores.',
-    t1h:'Tu propio camino al río.',t1p:'Pozas claras y piedras lisas. Un sendero privado hasta el agua es parte del plan.',
-    t2g:'Mirando al norte',t2h:'El Barú desde tu porche.',t3g:'Mirando al sur',t3h:'El Pacífico en el horizonte.',
-    t4g:'Sendero',t4h:'Un sendero de bosque hasta la cascada.',t4p:'Para ver aves, tucanes y mañanas tranquilas.',
-    t5g:'Bambusal',t5h:'Donde estará el bohío de yoga.',t5p:'Un pabellón de madera entre el bambú.',
-    hvCap:'Del huerto familiar, noviembre de 2026',hvK:'La cosecha semanal',hvH:'Cada semana, una pequeña <span class="it">cosecha.</span>',
-    hvP:'Nuestra familia ha cultivado esta tierra por generaciones. La propia Administración Agrícola de la comunidad llevará a cada casa una cajita con lo que esté en temporada.',
-    hvF:'<span>Naranjas</span><span>Limones</span><span>Guayaba</span><span>Plátano</span><span>Guineo</span><span>Caña</span><span>Zapallo</span><span>Maíz</span>',
-    hvFine:'Planeado. Un gesto semanal de la tierra donde vives, incluido en la cuota de la comunidad. Las cantidades varían según la temporada y complementan tu supermercado.',
-    amK:'El plan',amH:'Lo que vamos a <span class="it">construir.</span>',pl:'Planeado',
-    a0h:'Tres parques centrales',a0p:'Jardines alargados con árboles y senderos para caminar, en el centro de la comunidad.',
-    a1h:'Entrada con garita',a1p:'Garita, portón y jardín de entrada desde la calle asfaltada.',
-    a2h:'Bohío de yoga en el bambú',a2p:'Un pabellón abierto de madera dentro del bambusal.',
-    a3h:'Gimnasio de vidrio con vista al volcán',a3p:'Puertas de vidrio plegables que abren el salón hacia el Barú.',
-    a4h:'Sauna',a4p:'Calor después del sendero, río frío después del calor.',
-    a5h:'Invernadero hidropónico',a5p:'Torres verticales donde cada familia cosecha sus propias hojas verdes.',
-    a6h:'Paneles solares en cada casa',a6p:'Paneles en cada techo, diseñados desde el inicio.',
-    a7h:'Agua privada',a7p:'Un pozo comunitario y agua de manantial privada.',
-    a8h:'Senderos al río y a la cascada',a8p:'Un sendero privado al río Majagua y senderos de bosque al Charco La Pasión y a la cascada.',
-    paK:'Por qué Panamá. Por qué aquí.',paH:'Cerca de Boquete. <span class="it">Lejos de todo.</span>',
-    s1:'Panamá, segundo mejor país del mundo para retirarse.',s1s:'International Living, Índice Global de Retiro 2026.',
-    s2:'Boquete, el mejor lugar para retirarse en el extranjero.',
-    s3:'Panamá usa el dólar estadounidense. Sin cambio de moneda.',s3s:'El dólar es moneda de curso legal junto al balboa.',
-    s4:'De pensión al mes califican para la visa de Pensionado.',s4s:'Con descuentos para jubilados en Panamá. Confirma los requisitos vigentes con tu abogado.',
-    d2:'David y Federal Mall',d3:'Aeropuerto Enrique Malek (DAV)',dFine:'Tiempos aproximados en carro desde el portón.',
-    faK:'¿Quién vende?',faH:'La familia <span class="it">Rivera.</span>',
-    faL:'<li>Tierra de nuestra familia, cultivada por generaciones.</li><li>Sin intermediarios. Tratas directamente con nosotros.</li><li>Camina el terreno con nosotros antes de decidir.</li><li>Trae a tu propio abogado.</li><li>Financiamiento familiar disponible.</li>',
-    faC:'Delys Rivera, en el terreno',
-    rsK:'Lotes fundadores',rsH:'Solo 4 lotes <span class="it">fundadores.</span>',
-    rsP:'Los primeros lotes, los más cercanos a la calle asfaltada, salen primero a precio de fundador. Únete a la lista de reserva y agendamos tu visita privada al terreno o una videollamada en vivo con nuestra familia.',
-    rsNote:'Los números corresponden al master plan conceptual.',rsWa:'¿Prefieres escribirnos ya? WhatsApp',
-    fN:'Nombre completo',fC:'País',fE:'Correo',fL:'Busco',o1:'Un lugar para retirarme',o2:'Una segunda casa en la naturaleza',o3:'Una casa para mi familia',o4:'Una inversión',
-    fW:'Quiero',w1:'Caminar el terreno en persona',w2:'Una videollamada en vivo del terreno',fBtn:'Unirme a la lista de reserva',
-    dnH:'Un último paso.',dnP:'Envía este mensaje por WhatsApp y nuestra familia te responderá para agendar tu visita. Todavía no se ha enviado nada.',
-    dnWa:'Enviar por WhatsApp',dnCopy:'Copiar mensaje',
-    ft1:'Palma Real Rainforest Villa · Palma Real, Potrerillos Abajo, Chiriquí, República de Panamá.',
-    ft2:'Las fotografías y tomas aéreas son cuadros reales de la propiedad y sus alrededores, filmados en noviembre de 2026. El master plan y el modelo 3D son conceptuales: los linderos, tamaños de lote y amenidades son aproximados y están sujetos a levantamiento topográfico, permisos y aprobación del régimen de propiedad horizontal (PH). Las amenidades planeadas aún no están construidas. Esta página no es una oferta de venta; los términos se establecen en un contrato escrito revisado por tu propio abogado.'
-  };
-  const S={
-    en:{statement:'Volcán Barú rises to the north. On clear mornings the Pacific shines to the south. A creek runs along one side, a private forest along the other. In between, 3.2 hectares of open land.',
-        hl:['Barú','Pacific','creek','forest','3.2','hectares'],
-        start:'Scroll to build the community',entry:'Entrance and guardhouse',lot:(n)=>`Homesite ${n}`,lotShort:'Homesite',tags:{trail:'Private trail to Río Majagua',creek:'Quebrada',entry:'Entrance · guardhouse'},
-        founder:'Founder homesite',founderShort:'Founder',creek:'Creek side',forest:'Forest side',faces:'Faces the parks',
-        err:'Please add your name and a valid email so we can reach you.',copied:'Copied',copyFail:'Select the text above to copy',
-        msg:(f)=>`Hi, I'm ${f.name}${f.country?' from '+f.country:''}. I'd like to join the Palma Real reserve list.\nLooking for: ${f.look}\nI'd like to: ${f.when}\nEmail: ${f.email}`,
-        toggle:'ES',toggleAria:'Cambiar a español'},
-    es:{statement:'Al norte se levanta el Volcán Barú. En las mañanas claras, al sur brilla el Pacífico. A un lado corre una quebrada; al otro, un bosque privado. En medio, 3.2 hectáreas de terreno abierto.',
-        hl:['Barú','Pacífico','quebrada','bosque','3.2','hectáreas'],
-        start:'Desliza para construir la comunidad',entry:'Entrada y garita',lot:(n)=>`Lote ${n}`,lotShort:'Lote',tags:{trail:'Sendero privado al río Majagua',creek:'Quebrada',entry:'Entrada · garita'},
-        founder:'Lote fundador',founderShort:'Fundador',creek:'Lado quebrada',forest:'Lado bosque',faces:'Frente a los parques',
-        err:'Escribe tu nombre y un correo válido para poder contactarte.',copied:'Copiado',copyFail:'Selecciona el texto de arriba para copiarlo',
-        msg:(f)=>`Hola, soy ${f.name}${f.country?' de '+f.country:''}. Quiero unirme a la lista de reserva de Palma Real.\nBusco: ${f.look}\nQuiero: ${f.when}\nCorreo: ${f.email}`,
-        toggle:'EN',toggleAria:'Switch to English'}
-  };
-  const els=[...document.querySelectorAll('[data-t]')];
-  const EN={};els.forEach(e=>{if(!(e.dataset.t in EN))EN[e.dataset.t]=e.innerHTML});
-  let lang='en';const subs=[];
-  function stmt(){
-    const st=document.getElementById('statement');const s=S[lang];
-    st.innerHTML=s.statement.split(/\s+/).map(w=>`<span class="w${s.hl.includes(w.replace(/[.,;]/g,''))?' hl':''}">${w}</span>`).join(' ');
-  }
-  function set(l){
-    lang=l==='es'?'es':'en';
-    els.forEach(e=>{const k=e.dataset.t;const v=lang==='es'?(ES[k]??EN[k]):EN[k];if(e.innerHTML!==v)e.innerHTML=v});
-    document.documentElement.lang=lang;
-    const b=document.getElementById('langBtn');b.textContent=S[lang].toggle;b.setAttribute('aria-label',S[lang].toggleAria);
-    stmt();subs.forEach(f=>f(lang));
-  }
-  let saved=null;try{saved=localStorage.getItem('pr_lang')}catch(e){}
-  set(saved||'en');
-  return {set,get:()=>lang,S:()=>S[lang],on:(f)=>subs.push(f),save:(l)=>{try{localStorage.setItem('pr_lang',l)}catch(e){}}};
-})();
-</script>
+<script src="assets/js/i18n.js"></script>
 
 <script type="application/json" id="planData">{"outline":[[-114.25,355.51],[-16.41,396.02],[53.48,213.1],[30.18,208.65],[37.27,194.47],[46.39,176.24],[47.0,158.0],[53.48,152.94],[54.49,131.67],[51.86,121.54],[54.49,94.19],[43.35,93.18],[43.35,-1.62],[4.86,-1.22],[-4.86,0.0],[-37.68,3.65],[-114.25,355.51]],"green":[[30.18,208.65],[53.48,213.1],[104.12,87.1],[55.5,87.92],[54.49,94.19],[51.86,121.54],[54.49,131.67],[53.48,152.94],[47.0,158.0],[46.39,176.24],[37.27,194.47],[30.18,208.65]],"corridor":[[-40.72,390.96],[-40.72,349.43],[-44.77,344.77],[-52.87,341.94],[-58.95,338.29],[-62.8,331.2],[-63.0,324.11],[-60.37,313.98],[-56.92,302.84],[-52.87,279.95],[-46.79,256.25],[-42.74,231.33],[-39.1,218.78],[-34.64,205.0],[-28.56,183.93],[-23.5,160.03],[-18.43,135.72],[-12.96,111.01],[-7.7,100.27],[-5.27,95.21],[-4.86,-6.08],[4.86,-6.08],[4.86,94.8],[57.53,94.4],[57.53,100.07],[5.47,100.07],[5.87,131.67],[3.85,155.98],[-2.84,179.88],[-9.72,202.57],[-15.4,228.9],[-20.46,251.19],[-25.52,275.49],[-28.56,298.39],[-32.61,325.12],[-33.22,344.37],[-33.22,382.45],[-14.38,382.45],[-14.38,390.96],[-40.72,390.96]],"asphalt":{"outer":[[-16.18,389.16],[-16.18,384.25],[-35.02,384.25],[-35.02,344.34],[-34.41,324.96],[-30.34,298.13],[-27.3,275.19],[-22.22,250.8],[-17.15,228.51],[-11.47,202.12],[-4.56,179.38],[2.07,155.66],[4.07,131.61],[3.65,98.27],[55.73,98.27],[55.73,96.21],[3.06,96.62],[3.06,-4.28],[-3.07,-4.28],[-3.47,95.62],[-6.08,101.06],[-8.0,104.97],[-5.36,104.03],[-5.29,104.01],[-5.27,104.0],[-5.13,103.96],[-4.99,103.94],[-4.86,103.94],[-4.72,103.95],[-4.58,103.97],[-4.44,104.0],[-4.31,104.05],[-4.19,104.11],[-4.07,104.18],[-3.96,104.27],[-3.86,104.36],[-3.77,104.47],[-3.69,104.58],[-3.62,104.7],[-3.6,104.73],[-3.57,104.79],[0.05,112.84],[0.08,112.9],[0.09,112.93],[0.13,113.07],[0.16,113.21],[0.17,113.24],[0.18,113.32],[2.2,131.49],[2.2,131.55],[2.21,131.58],[2.21,131.7],[2.21,131.73],[2.21,131.79],[0.99,149.98],[0.99,150.02],[0.99,150.06],[0.98,150.1],[-0.84,164.23],[-0.85,164.3],[-0.85,164.32],[-0.88,164.45],[-0.92,164.57],[-0.97,164.69],[-1.03,164.8],[-1.04,164.83],[-1.08,164.88],[-7.12,173.95],[-7.16,174.01],[-7.18,174.03],[-7.27,174.14],[-7.37,174.24],[-7.48,174.33],[-7.6,174.4],[-7.72,174.47],[-7.85,174.52],[-7.99,174.56],[-8.13,174.58],[-8.27,174.59],[-8.41,174.59],[-8.44,174.59],[-8.51,174.58],[-19.99,173.17],[-20.06,173.16],[-20.09,173.16],[-20.22,173.13],[-20.35,173.09],[-20.47,173.03],[-20.59,172.97],[-20.7,172.89],[-20.81,172.8],[-20.9,172.7],[-20.99,172.6],[-21.06,172.48],[-21.12,172.36],[-21.17,172.24],[-21.21,172.11],[-21.24,171.97],[-21.25,171.84],[-21.25,171.7],[-21.25,171.68],[-21.24,171.61],[-19.22,151.8],[-19.22,151.77],[-19.21,151.75],[-19.21,151.72],[-17.74,141.22],[-21.74,160.4],[-26.81,184.37],[-32.92,205.53],[-37.37,219.3],[-40.98,231.73],[-45.03,256.62],[-51.11,280.33],[-55.17,303.27],[-58.63,314.48],[-61.19,324.32],[-61.01,330.72],[-57.6,337.0],[-52.1,340.3],[-43.72,343.23],[-38.92,348.76],[-38.92,389.16],[-16.18,389.16]],"holes":[[[-39.08,243.41],[-39.11,243.41],[-39.24,243.36],[-39.36,243.3],[-39.48,243.23],[-39.59,243.14],[-39.69,243.05],[-39.78,242.95],[-39.86,242.83],[-39.93,242.71],[-39.99,242.59],[-40.03,242.46],[-40.07,242.32],[-40.08,242.19],[-40.09,242.05],[-40.08,241.91],[-40.06,241.78],[-40.05,241.75],[-40.04,241.68],[-35.99,226.52],[-35.99,226.51],[-35.99,226.5],[-35.98,226.49],[-31.33,210.3],[-31.33,210.29],[-26.88,194.11],[-26.87,194.08],[-26.86,194.04],[-26.85,194.01],[-22.81,181.9],[-22.79,181.83],[-22.77,181.8],[-22.72,181.67],[-22.64,181.55],[-22.56,181.43],[-22.46,181.33],[-22.44,181.31],[-22.39,181.26],[-17.98,177.25],[-17.93,177.2],[-17.91,177.18],[-17.8,177.1],[-17.68,177.03],[-17.56,176.97],[-17.43,176.93],[-17.3,176.89],[-17.16,176.87],[-17.02,176.86],[-16.89,176.87],[-16.75,176.89],[-16.62,176.92],[-16.59,176.93],[-16.53,176.95],[-11.93,178.55],[-11.86,178.57],[-11.83,178.59],[-11.7,178.65],[-11.58,178.72],[-11.46,178.81],[-11.36,178.9],[-11.26,179.01],[-11.18,179.13],[-11.11,179.25],[-11.05,179.38],[-11.01,179.52],[-10.98,179.66],[-10.97,179.68],[-10.96,179.76],[-9.55,192.26],[-9.55,192.32],[-9.54,192.35],[-9.54,192.47],[-9.55,192.59],[-9.57,192.71],[-9.57,192.74],[-9.58,192.8],[-13.02,206.95],[-13.02,206.96],[-17.07,223.16],[-17.08,223.18],[-17.08,223.2],[-17.09,223.22],[-21.13,237.36],[-21.15,237.43],[-21.16,237.46],[-21.21,237.58],[-21.27,237.7],[-21.35,237.82],[-21.36,237.84],[-21.4,237.9],[-27.45,245.55],[-27.49,245.6],[-27.51,245.62],[-27.6,245.72],[-27.7,245.81],[-27.81,245.88],[-27.93,245.95],[-28.05,246.01],[-28.18,246.05],[-28.31,246.08],[-28.45,246.1],[-28.58,246.1],[-28.72,246.09],[-28.85,246.07],[-28.88,246.07],[-28.94,246.05],[-39.01,243.43],[-39.08,243.41]],[[-56.9,335.26],[-56.9,335.24],[-56.9,335.17],[-56.3,320.03],[-56.29,319.97],[-56.29,319.94],[-56.27,319.82],[-56.25,319.7],[-56.24,319.68],[-56.22,319.62],[-51.2,303.53],[-51.19,303.48],[-43.11,263.09],[-43.1,263.04],[-43.09,262.99],[-43.07,262.94],[-39.04,248.41],[-39.01,248.34],[-39.01,248.32],[-38.95,248.18],[-38.89,248.06],[-38.82,247.94],[-38.73,247.83],[-38.63,247.73],[-38.52,247.64],[-38.41,247.56],[-38.29,247.5],[-38.16,247.44],[-38.02,247.4],[-37.89,247.37],[-37.75,247.36],[-37.72,247.36],[-37.65,247.36],[-31.63,247.36],[-31.56,247.36],[-31.53,247.36],[-31.39,247.37],[-31.26,247.4],[-31.12,247.44],[-30.99,247.5],[-30.97,247.51],[-30.9,247.54],[-26.5,249.94],[-26.44,249.98],[-26.41,249.99],[-26.3,250.07],[-26.19,250.16],[-26.09,250.26],[-26.01,250.37],[-25.93,250.49],[-25.87,250.62],[-25.82,250.75],[-25.78,250.88],[-25.76,251.02],[-25.75,251.16],[-25.75,251.19],[-25.75,251.26],[-26.15,263.36],[-26.15,263.43],[-26.16,263.46],[-26.18,263.61],[-26.18,263.64],[-26.2,263.71],[-30.22,279.8],[-30.23,279.84],[-36.29,320.25],[-36.29,320.26],[-38.31,335.41],[-38.32,335.47],[-38.33,335.5],[-38.36,335.63],[-38.4,335.75],[-38.45,335.88],[-38.52,335.99],[-38.59,336.1],[-38.67,336.2],[-38.77,336.29],[-38.87,336.38],[-38.98,336.45],[-39.09,336.51],[-39.12,336.52],[-39.18,336.55],[-46.22,339.57],[-46.28,339.59],[-46.3,339.6],[-46.43,339.64],[-46.55,339.67],[-46.68,339.69],[-46.81,339.69],[-46.94,339.68],[-47.07,339.66],[-47.19,339.63],[-47.22,339.62],[-47.28,339.6],[-55.94,336.58],[-56.0,336.56],[-56.03,336.55],[-56.15,336.49],[-56.27,336.42],[-56.38,336.34],[-56.48,336.25],[-56.58,336.15],[-56.66,336.04],[-56.73,335.92],[-56.79,335.8],[-56.84,335.67],[-56.87,335.54],[-56.89,335.4],[-56.9,335.26]]]},"parks":[[[-55.5,335.22],[-54.9,320.09],[-54.9,320.06],[-54.89,320.03],[-49.85,303.92],[-49.82,303.79],[-41.73,263.36],[-41.72,263.32],[-37.69,248.78],[-37.68,248.76],[-37.65,248.76],[-31.63,248.76],[-31.6,248.76],[-31.57,248.77],[-27.17,251.17],[-27.15,251.19],[-27.15,251.22],[-27.55,263.31],[-27.55,263.34],[-27.56,263.37],[-31.59,279.49],[-31.61,279.6],[-37.68,320.05],[-37.68,320.07],[-39.7,335.22],[-39.7,335.25],[-39.73,335.26],[-46.77,338.28],[-46.79,338.29],[-46.82,338.28],[-55.48,335.26],[-55.5,335.25],[-55.5,335.22]],[[-38.69,242.07],[-38.68,242.04],[-34.64,226.88],[-34.64,226.87],[-29.98,210.68],[-29.98,210.67],[-25.53,194.48],[-25.52,194.45],[-21.48,182.34],[-21.47,182.31],[-21.45,182.29],[-17.04,178.28],[-17.02,178.26],[-16.99,178.27],[-12.39,179.87],[-12.36,179.88],[-12.35,179.91],[-10.94,192.41],[-10.94,192.44],[-10.95,192.47],[-14.38,206.62],[-18.43,222.82],[-18.44,222.84],[-22.48,236.98],[-22.49,237.01],[-22.5,237.03],[-28.54,244.68],[-28.56,244.7],[-28.59,244.7],[-38.66,242.08],[-38.69,242.07]],[[-19.85,171.78],[-19.85,171.75],[-17.83,151.94],[-17.82,151.92],[-14.99,131.7],[-14.98,131.64],[-10.94,114.47],[-10.94,114.45],[-10.93,114.43],[-7.71,106.38],[-7.7,106.35],[-7.67,106.34],[-4.89,105.35],[-4.86,105.34],[-4.85,105.36],[-1.23,113.41],[-1.22,113.44],[-1.21,113.47],[0.81,131.64],[0.81,131.67],[0.81,131.7],[-0.4,149.88],[-0.41,149.92],[-2.22,164.05],[-2.23,164.08],[-2.24,164.1],[-8.29,173.17],[-8.31,173.2],[-8.34,173.19],[-19.82,171.78],[-19.85,171.78]]],"lots":[{"id":1,"side":"creek","area":953.34,"poly":[[5.86,21.48],[42.55,21.48],[42.55,-0.81],[5.86,-0.43],[5.86,21.48]],"house":[20.36,10.43],"face":-3.1416},{"id":2,"side":"creek","area":945.03,"poly":[[5.86,46.2],[42.55,46.2],[42.55,23.08],[5.86,23.08],[5.86,46.2]],"house":[20.36,34.64],"face":-3.1416},{"id":3,"side":"creek","area":968.29,"poly":[[5.86,69.71],[42.55,70.07],[42.55,47.8],[5.86,47.8],[5.86,69.71]],"house":[20.36,58.84],"face":-3.1416},{"id":4,"side":"creek","area":948.88,"poly":[[42.55,93.51],[42.55,71.67],[5.86,71.31],[5.86,93.79],[42.55,93.51]],"house":[24.25,79.15],"face":1.5631},{"id":5,"side":"creek","area":1370.44,"poly":[[53.59,131.4],[51.05,121.61],[53.03,101.07],[6.48,101.07],[6.86,130.5],[53.59,131.4]],"house":[29.56,115.57],"face":-1.5708},{"id":6,"side":"creek","area":1254.92,"poly":[[6.84,132.1],[4.93,155.08],[46.65,157.26],[52.7,152.54],[53.63,133.0],[6.84,132.1]],"house":[20.44,143.57],"face":-3.0585},{"id":7,"side":"creek","area":1184.34,"poly":[[4.7,156.67],[-1.55,179.02],[42.9,181.42],[45.59,176.03],[46.17,158.84],[4.7,156.67]],"house":[16.77,167.32],"face":-2.8689},{"id":8,"side":"creek","area":1111.63,"poly":[[-2.01,180.6],[-8.49,201.95],[30.01,207.2],[36.56,194.11],[42.12,182.98],[-2.01,180.6]],"house":[9.94,191.16],"face":-2.8469},{"id":9,"side":"creek","area":1528.97,"poly":[[29.26,208.71],[-8.9,203.51],[-14.21,228.16],[44.21,235.13],[52.39,213.71],[28.99,209.23],[29.26,208.71]],"house":[3.13,216.51],"face":-2.9294},{"id":10,"side":"creek","area":1412.01,"poly":[[-14.55,229.73],[-19.27,250.46],[35.65,257.53],[43.62,236.67],[-14.55,229.73]],"house":[-2.11,240.41],"face":-2.9181},{"id":11,"side":"creek","area":1349.08,"poly":[[-19.61,252.03],[-24.36,274.81],[26.13,282.43],[35.06,259.07],[-19.61,252.03]],"house":[-7.39,264.47],"face":-2.9362},{"id":12,"side":"creek","area":1212.96,"poly":[[-27.47,297.8],[16.74,307.02],[25.55,283.96],[-24.63,276.39],[-27.47,297.8]],"house":[-11.79,289.84],"face":-3.0096},{"id":13,"side":"creek","area":1040.14,"poly":[[16.16,308.54],[-27.7,299.39],[-31.49,324.42],[7.96,330.0],[16.16,308.54]],"house":[-15.3,314.32],"face":-2.9912},{"id":14,"side":"creek","area":1682.62,"poly":[[-31.64,326.01],[-32.22,344.38],[-32.22,381.45],[-14.36,381.45],[-14.28,381.45],[-14.19,381.47],[-14.09,381.49],[-14.0,381.52],[-13.91,381.57],[-13.82,381.62],[-13.75,381.68],[-13.67,381.74],[-13.61,381.81],[-13.55,381.89],[-13.5,381.98],[-13.46,382.07],[-13.42,382.16],[-13.4,382.26],[-13.38,382.35],[-13.38,382.43],[-13.38,385.86],[7.38,331.53],[-31.64,326.01]],"house":[-17.72,352.47],"face":-3.1416},{"id":15,"side":"forest","area":1214.02,"poly":[[-56.2,341.11],[-76.01,370.48],[-41.72,384.68],[-41.72,349.81],[-45.35,345.63],[-53.22,342.88],[-53.3,342.85],[-53.37,342.81],[-56.2,341.11]],"house":[-56.22,363.34],"face":-0.0},{"id":16,"side":"forest","area":1930.96,"poly":[[-63.97,325.2],[-106.39,323.17],[-113.33,355.03],[-77.52,369.85],[-57.57,340.29],[-59.48,339.14],[-59.55,339.09],[-59.63,339.02],[-59.71,338.95],[-59.77,338.86],[-59.82,338.79],[-63.69,331.66],[-63.72,331.6],[-63.75,331.51],[-63.78,331.42],[-63.79,331.32],[-63.8,331.25],[-63.97,325.2]],"house":[-76.49,338.46],"face":-0.4871},{"id":17,"side":"forest","area":1032.79,"poly":[[-63.9,323.6],[-61.33,313.72],[-61.33,313.7],[-58.12,303.31],[-100.63,296.71],[-106.05,321.59],[-63.9,323.6]],"house":[-76.11,312.93],"face":0.2544},{"id":18,"side":"forest","area":1098.8,"poly":[[-53.96,280.36],[-95.34,272.38],[-100.29,295.14],[-57.75,301.75],[-53.96,280.36]],"house":[-70.15,288.64],"face":0.1752},{"id":19,"side":"forest","area":1073.46,"poly":[[-47.93,256.63],[-90.04,248.02],[-95.0,270.82],[-53.61,278.8],[-47.93,256.63]],"house":[-65.09,265.21],"face":0.251},{"id":20,"side":"forest","area":1082.58,"poly":[[-43.83,231.75],[-84.82,224.04],[-89.7,246.46],[-47.62,255.06],[-43.83,231.75]],"house":[-59.93,240.46],"face":0.1612},{"id":21,"side":"forest","area":1100.94,"poly":[[-35.86,205.52],[-79.59,200.01],[-84.48,222.48],[-43.46,230.2],[-40.06,218.49],[-40.05,218.47],[-35.86,205.52]],"house":[-54.5,216.24],"face":0.2826},{"id":22,"side":"forest","area":1174.74,"poly":[[-29.74,184.39],[-74.59,177.04],[-79.25,198.44],[-35.39,203.97],[-29.74,184.39]],"house":[-47.33,193.07],"face":0.2808},{"id":23,"side":"forest","area":1161.81,"poly":[[-24.62,160.47],[-69.31,152.78],[-74.25,175.47],[-29.35,182.83],[-24.62,160.47]],"house":[-41.37,169.59],"face":0.2088},{"id":24,"side":"forest","area":1095.75,"poly":[[-19.55,136.18],[-64.11,128.88],[-68.97,151.21],[-24.29,158.91],[-19.55,136.18]],"house":[-36.29,145.46],"face":0.2054},{"id":25,"side":"forest","area":1228.45,"poly":[[-14.11,111.56],[-58.94,105.13],[-63.77,127.32],[-19.22,134.62],[-14.11,111.56]],"house":[-31.14,121.39],"face":0.2178},{"id":26,"side":"forest","area":1230.46,"poly":[[-6.22,82.28],[-53.54,80.31],[-58.6,103.57],[-13.6,110.02],[-8.6,99.83],[-6.27,94.98],[-6.22,82.28]],"house":[-23.78,97.86],"face":0.4561},{"id":27,"side":"forest","area":1103.12,"poly":[[-6.11,56.5],[-48.15,55.54],[-53.2,78.72],[-6.21,80.68],[-6.11,56.5]],"house":[-20.66,68.14],"face":0.004},{"id":28,"side":"forest","area":1011.69,"poly":[[-6.01,31.58],[-42.86,31.21],[-47.81,53.95],[-6.11,54.9],[-6.01,31.58]],"house":[-20.56,43.19],"face":0.004},{"id":29,"side":"forest","area":1017.23,"poly":[[-37.02,4.38],[-42.51,29.61],[-6.01,29.98],[-5.89,0.92],[-37.02,4.38]],"house":[-20.45,16.62],"face":0.004}],"creek":[[-21.47,441.6],[-15.4,405.14],[-5.27,394.0],[2.84,382.86],[5.87,370.7],[8.51,354.5],[12.96,338.29],[14.99,328.16],[18.64,318.03],[17.42,303.85],[16.0,291.7],[20.05,281.57],[24.11,267.39],[27.14,253.21],[29.58,239.03],[31.2,214.72],[40.31,196.49],[48.41,178.26],[57.53,158.0],[65.63,137.75],[72.72,117.49],[78.19,97.23],[82.85,74.95],[86.9,44.57],[90.95,10.13],[95.01,-30.39],[98.04,-70.9]],"trail":[[-2.03,-3.65],[-37.68,-7.7],[-86.29,-13.17],[-137.95,-19.85],[-147.07,2.03],[-156.38,28.36]],"access":[[0.0,1.01],[0.0,-24.31],[0.81,-70.9],[2.84,-121.54]],"gate":[0.0,1.6205573650015088],"guard":[-8.913065507508298,-3.646254071253395],"arrows":[[-24.96,260.76,1.571],[-44.48,260.76,-1.571],[-35.58,326.29,1.571],[-59.04,326.29,-1.571],[-8.59,190.26,1.571],[-27.26,190.26,-1.571],[-18.76,232.7,1.571],[-39.58,232.7,-1.571],[2.45,117.34,1.571],[-12.99,117.34,-1.571],[0.27,161.2,1.571],[-21.26,161.2,-1.571]]}</script>
-<script type="module">
-import * as THREE from './lib/three.module.min.js';
-
-const I=window.I18N;
-const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
-const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
-const easeOutBack=t=>{const c1=1.5,c3=c1+1;return 1+c3*Math.pow(t-1,3)+c1*Math.pow(t-1,2)};
-const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-function progress(el){const r=el.getBoundingClientRect();const t=r.height-innerHeight;return t<=0?0:clamp(-r.top/t)}
-function inView(el){const r=el.getBoundingClientRect();return r.bottom>0&&r.top<innerHeight}
-
-/* ---------- Language gate ---------- */
-const gate=document.getElementById('gate');
-const hv=document.getElementById('heroVid');
-function enter(l){
-  I.set(l);I.save(l);
-  gate.classList.add('out');document.documentElement.classList.add('nogate-pending');
-  setTimeout(()=>{document.documentElement.classList.add('nogate');gate.classList.remove('out');window.scrollTo(0,0)},reduce?0:1000);
-  if(!reduce)hv.play?.().catch(()=>{});
-}
-gate.querySelectorAll('.lang').forEach(b=>b.addEventListener('click',()=>enter(b.dataset.lang)));
-document.getElementById('langBtn').addEventListener('click',()=>{const l=I.get()==='en'?'es':'en';I.set(l);I.save(l)});
-
-const nav=document.getElementById('nav');
-if(reduce){hv.removeAttribute('autoplay');hv.pause();}else{hv.play?.().catch(()=>{});}
-
-/* ---------- Aerial orbit ---------- */
-const orbit=document.getElementById('aerial');
-const oc=document.getElementById('orbitCanvas');const octx=oc.getContext('2d');
-const N_FR=80;const frames=new Array(N_FR);let lastFrame=-1;
-const caps=[...orbit.querySelectorAll('.c')];
-const oBar=document.getElementById('orbitBar'),oPct=document.getElementById('orbitPct');
-const src=i=>`assets/seq/r_${String(i+1).padStart(3,'0')}.jpg`;
-function loadFrame(i){if(frames[i])return;const im=new Image();im.decoding='async';im.src=src(i);im.onload=()=>{im.ok=true;if(i===0||i===lastFrame)drawFrame(i,true)};frames[i]=im}
-loadFrame(0);
-const loadRest=()=>{for(let s=8;s>=1;s=s>>1){for(let i=0;i<N_FR;i+=s)loadFrame(i)}};
-if('IntersectionObserver' in window){const io=new IntersectionObserver(e=>{if(e[0].isIntersecting){loadRest();io.disconnect()}},{rootMargin:'1200px'});io.observe(orbit)}else loadRest();
-function sizeOrbit(){const d=Math.min(devicePixelRatio||1,1.5);oc.width=oc.clientWidth*d;oc.height=oc.clientHeight*d;lastFrame=-1}
-// Pixel positions of Volcán Barú's summit and of the sea on the horizon, per drone frame (1280×720), tracked from the footage.
-const VOL={x:[611,618,627,635,643,658,692,752,833,914,973,1019,1061,1093,1114,1128,1130,1123,1117,1114,1106,1101,1114,1152,1197,1239,1279,1321,1365],
-           y:[47,54,61,68,73,78,79,79,76,72,70,69,69,69,72,77,82,85,85,83,81,78,75,71,71,72,74,76,78]};
-const SEA={f0:57,x:[40,101,253,445,565,693,829,925,973,1013,1061],y:[240,237,234,235,236,235,236,236,236,235,235]};
-const aVol=document.getElementById('aVol'),aSea=document.getElementById('aSea');
-let zoom=1,lastZoom=0;
-function zoomAt(p){const sm=t=>t*t*(3-2*t);return p<.83?1+.12*sm(clamp((p-.62)/.21)):1+.12*(1-sm(clamp((p-.83)/.17)))}
-function drawFrame(i,force){
-  let k=i;while(k>=0&&!(frames[k]&&frames[k].ok))k--;
-  if(k<0)return;if(k===lastFrame&&zoom===lastZoom&&!force)return;lastFrame=k;lastZoom=zoom;
-  const im=frames[k];const cw=oc.width,ch=oc.height;const s=Math.max(cw/im.naturalWidth,ch/im.naturalHeight)*zoom;
-  const w=im.naturalWidth*s,h=im.naturalHeight*s;octx.drawImage(im,(cw-w)/2,(ch-h)/2,w,h);
-}
-function place(el,fx,fy,alpha){
-  if(alpha<=0.001){el.style.opacity=0;return}
-  const cw=oc.clientWidth,ch=oc.clientHeight;const s=Math.max(cw/1280,ch/720)*zoom;
-  const x=(cw-1280*s)/2+fx*s,y=(ch-720*s)/2+fy*s;
-  const t=el.querySelector('.atxt');const w=t.offsetWidth;const g=Math.max(16,cw*.04);
-  const left=clamp(x-w*.18,g,cw-g-w);t.style.setProperty('--tx',(left-x)+'px');
-  el.style.transform=`translate(${x.toFixed(1)}px,${y.toFixed(1)}px)`;el.style.opacity=(x<-20||x>cw+20)?0:alpha.toFixed(3);
-}
-function updateAnchors(p){
-  const k=Math.max(0,lastFrame);
-  if(k<VOL.x.length&&p<.4){place(aVol,VOL.x[k],VOL.y[k],k<=21?1:clamp((27-k)/6))}else aVol.style.opacity=0;
-  const j=k-SEA.f0;
-  if(j>=0&&j<SEA.x.length&&p>=.7&&p<=.86){place(aSea,SEA.x[j],SEA.y[j],Math.min(clamp((j+1)/2.5),clamp((SEA.x.length-j)/2)))}else aSea.style.opacity=0;
-}
-
-/* ---------- Master plan 3D ---------- */
-const planEl=document.getElementById('plan');
-const pc=document.getElementById('planCanvas');
-const PLAN=JSON.parse(document.getElementById('planData').textContent);
-const FOUNDER=new Set([1,2,28,29]);
-const fmtArea=a=>Math.round(a).toLocaleString('en-US')+' m²';
-const order=[...PLAN.lots].sort((a,b)=>a.id-b.id); // follows the one-way loop
-let R=null;
-const ticksEl=document.getElementById('ticks');
-order.forEach(l=>{const i=document.createElement('i');if(FOUNDER.has(l.id))i.classList.add('f');ticksEl.appendChild(i)});
-const ticks=[...ticksEl.children];
-const lotNum=document.getElementById('lotNum'),lotLabel=document.getElementById('lotLabel'),lotChips=document.getElementById('lotChips');
-function chipsFor(l){
-  const s=I.S();
-  let h=FOUNDER.has(l.id)?`<span class="chip f">${s.founder}</span>`:'';
-  h+=l.side==='creek'?`<span class="chip cr">${s.creek}</span>`:`<span class="chip fo">${s.forest}</span>`;
-  h+=`<span class="chip">${fmtArea(l.area)}</span>`;
-  return h;
-}
-let shownIdx=-2;
-function setPanel(idx,force){
-  if(idx===shownIdx&&!force)return;shownIdx=idx;const s=I.S();
-  ticks.forEach((t,i)=>t.classList.toggle('on',i<=idx));
-  if(idx<0){lotNum.textContent='00';lotLabel.textContent=s.start;lotChips.innerHTML=`<span class="chip">${s.entry}</span>`;return}
-  const l=order[idx];lotNum.textContent=String(l.id).padStart(2,'0');lotLabel.textContent=s.lot(l.id);lotChips.innerHTML=chipsFor(l);
-}
-setPanel(-1,true);
-I.on(()=>setPanel(shownIdx,true));
-
-function buildPlan(){
-  const renderer=new THREE.WebGLRenderer({canvas:pc,antialias:true,powerPreference:'high-performance'});
-  renderer.setPixelRatio(Math.min(devicePixelRatio||1,2));
-  renderer.outputColorSpace=THREE.SRGBColorSpace;
-  renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.08;
-  renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
-  const scene=new THREE.Scene();
-  const bg=new THREE.Color('#071a12');scene.background=bg;scene.fog=new THREE.Fog(bg,420,1150);
-  const camera=new THREE.PerspectiveCamera(36,1,1,3000);
-  scene.add(new THREE.HemisphereLight('#e6eef2','#0a2015',1.05));
-  const sun=new THREE.DirectionalLight('#fffaf0',2.1);sun.position.set(200,260,-60);sun.target.position.set(-20,0,-195);
-  sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);const sc=sun.shadow.camera;sc.left=-270;sc.right=270;sc.top=270;sc.bottom=-270;sc.near=10;sc.far=800;sun.shadow.bias=-.0008;sun.shadow.normalBias=.6;
-  scene.add(sun,sun.target);
-
-  const V=(x,y,h=0)=>new THREE.Vector3(x,h,-y);
-  const shapeOf=(pts,holes)=>{const s=new THREE.Shape();pts.forEach((p,i)=>i?s.lineTo(p[0],p[1]):s.moveTo(p[0],p[1]));
-    (holes||[]).forEach(hp=>{const h=new THREE.Path();hp.forEach((p,i)=>i?h.lineTo(p[0],p[1]):h.moveTo(p[0],p[1]));s.holes.push(h)});return s};
-  const flat=g=>{g.rotateX(-Math.PI/2);return g};
-  const std=(c,r=.95,extra={})=>new THREE.MeshStandardMaterial(Object.assign({color:c,roughness:r},extra));
-  const plane=(pts,holes,color,h,r)=>{const m=new THREE.Mesh(flat(new THREE.ShapeGeometry(shapeOf(pts,holes),2)),std(color,r));m.position.y=h;m.receiveShadow=true;scene.add(m);return m};
-
-  const ground=new THREE.Mesh(new THREE.PlaneGeometry(2600,2600),std('#0f2c1d',1));
-  ground.rotation.x=-Math.PI/2;ground.position.set(0,-.02,-195);ground.receiveShadow=true;scene.add(ground);
-  plane(PLAN.outline,null,'#2a5a3b',.04,1);
-  plane(PLAN.green,null,'#3d7a4b',.05,1);  // reserved area: left green on purpose
-  scene.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(PLAN.outline.map(p=>V(p[0],p[1],.5))),new THREE.LineBasicMaterial({color:'#f5f2ea',transparent:true,opacity:.85})));
-  // main road: sidewalks and planting strips, asphalt, three central parks
-  plane(PLAN.corridor,null,'#dccfae',.12,.9);
-  plane(PLAN.asphalt.outer,PLAN.asphalt.holes,'#5b615e',.16,.9);
-  PLAN.parks.forEach(p=>{plane(p,null,'#5d9e5b',.24,1);
-    scene.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(p.map(q=>V(q[0],q[1],.3))),new THREE.LineBasicMaterial({color:'#e3d3ae',transparent:true,opacity:.6})))});
-  function ribbon(pts2,width,h,color,emissive){
-    const curve=new THREE.CatmullRomCurve3(pts2.map(p=>V(p[0],p[1],h)),false,'centripetal');
-    const n=260,pos=[],idx=[];
-    for(let i=0;i<=n;i++){const t=i/n;const p=curve.getPoint(t),d=curve.getTangent(t);const nx=-d.z,nz=d.x;const L=Math.hypot(nx,nz)||1;
-      pos.push(p.x+nx/L*width/2,h,p.z+nz/L*width/2,p.x-nx/L*width/2,h,p.z-nz/L*width/2);
-      if(i<n){const a=i*2;idx.push(a,a+1,a+2,a+1,a+3,a+2)}}
-    const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(pos,3));g.setIndex(idx);g.computeVertexNormals();
-    const m=new THREE.Mesh(g,std(color,.85,{emissive:emissive||'#000',emissiveIntensity:emissive?.35:0,side:THREE.DoubleSide}));m.receiveShadow=true;scene.add(m);return {m,curve};
-  }
-  const creek=ribbon(PLAN.creek,5,.32,'#5ea3bd','#2a6f88');
-  const trail=ribbon(PLAN.trail,3,.1,'#c9a97a');
-  ribbon(PLAN.access,8,.08,'#1d211f');
-  // one-way arrows
-  const arrowShape=new THREE.Shape();arrowShape.moveTo(1.8,0);arrowShape.lineTo(-1.1,1.05);arrowShape.lineTo(-.5,0);arrowShape.lineTo(-1.1,-1.05);arrowShape.lineTo(1.8,0);
-  const arrowGeo=flat(new THREE.ShapeGeometry(arrowShape));const arrowMat=new THREE.MeshBasicMaterial({color:'#f5f2ea',transparent:true,opacity:.85});
-  PLAN.arrows.forEach(([x,y,a])=>{const m=new THREE.Mesh(arrowGeo,arrowMat);m.position.copy(V(x,y,.2));m.rotation.y=a;scene.add(m)});
-  // entrance: guardhouse at the main easement (S.P.), gate and two royal palms
-  const gh=new THREE.Group();
-  const ghb=new THREE.Mesh(new THREE.BoxGeometry(4.5,3,4.5),std('#efe9dc',.8));ghb.position.y=1.5;ghb.castShadow=true;gh.add(ghb);
-  const ghr=new THREE.Mesh(new THREE.ConeGeometry(4.2,2,4),std('#20262a',.7));ghr.rotation.y=Math.PI/4;ghr.position.y=4;ghr.castShadow=true;gh.add(ghr);
-  gh.position.copy(V(PLAN.guard[0],PLAN.guard[1],0));scene.add(gh);
-  const gate3=new THREE.Mesh(new THREE.BoxGeometry(9,.35,.35),std('#8a6a45',.8));gate3.position.copy(V(PLAN.gate[0],PLAN.gate[1],1.4));scene.add(gate3);
-  function palm(x,y){const g=new THREE.Group();
-    const t=new THREE.Mesh(new THREE.CylinderGeometry(.4,.65,12,10),std('#bfb8a6',.9));t.position.y=6;t.castShadow=true;g.add(t);
-    const fm=std('#3f8a4c',.8,{side:THREE.DoubleSide});
-    for(let i=0;i<10;i++){const f=new THREE.Mesh(new THREE.PlaneGeometry(1.5,7),fm);f.geometry.translate(0,3.5,0);f.position.y=12;f.rotation.order='YXZ';f.rotation.y=i/10*Math.PI*2;f.rotation.x=-1.05-(i%2)*.3;f.castShadow=true;g.add(f)}
-    g.position.copy(V(x,y,0));scene.add(g)}
-  palm(PLAN.gate[0]-7.5,PLAN.gate[1]-3);palm(PLAN.gate[0]+7.5,PLAN.gate[1]-3);
-
-  // helpers
-  const pip=(x,y,poly)=>{let c=false;for(let i=0,j=poly.length-1;i<poly.length;j=i++){const [xi,yi]=poly[i],[xj,yj]=poly[j];if(((yi>y)!==(yj>y))&&(x<(xj-xi)*(y-yi)/(yj-yi)+xi))c=!c}return c};
-  const segD=(px,py,a,b)=>{const dx=b[0]-a[0],dy=b[1]-a[1];const t=clamp(((px-a[0])*dx+(py-a[1])*dy)/(dx*dx+dy*dy));return Math.hypot(px-a[0]-t*dx,py-a[1]-t*dy)};
-  const polyD=(x,y,pts,closed)=>{let m=1e9;for(let i=0;i<pts.length-(closed?0:1);i++)m=Math.min(m,segD(x,y,pts[i],pts[(i+1)%pts.length]));return m};
-  let seed=11;const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647};
-  const m4=new THREE.Matrix4(),q=new THREE.Quaternion(),sv=new THREE.Vector3(),pv=new THREE.Vector3(),col=new THREE.Color();
-  const treeGeo=new THREE.IcosahedronGeometry(1,1);
-  const COUNT=2600;const trees=new THREE.InstancedMesh(treeGeo,std('#ffffff',.95,{flatShading:true}),COUNT);trees.castShadow=true;trees.receiveShadow=true;
-  const greens=['#1d4a2c','#245636','#1a3f27','#2d6340','#163a24','#2f5a2f'];
-  let placed=0,guard=0;
-  while(placed<COUNT&&guard<90000){guard++;
-    const x=-280+rnd()*480,y=-110+rnd()*600;
-    if(pip(x,y,PLAN.outline)||polyD(x,y,PLAN.outline,true)<4)continue;
-    if(pip(x,y,PLAN.green)||polyD(x,y,PLAN.green,true)<3)continue;
-    if(polyD(x,y,PLAN.creek,false)<5)continue;
-    if(polyD(x,y,PLAN.trail,false)<3.5)continue;
-    if(polyD(x,y,PLAN.access,false)<7)continue;
-    const r=2.6+rnd()*4.2;sv.set(r*(.9+rnd()*.3),r*(.8+rnd()*.5),r*(.9+rnd()*.3));pv.set(x,r*.75,-y);q.setFromEuler(new THREE.Euler(0,rnd()*6.28,0));
-    m4.compose(pv,q,sv);trees.setMatrixAt(placed,m4);col.set(greens[(rnd()*greens.length)|0]).offsetHSL(0,0,(rnd()-.5)*.05);trees.setColorAt(placed,col);placed++}
-  trees.count=placed;scene.add(trees);
-  const PT=70;const ptrees=new THREE.InstancedMesh(treeGeo,std('#ffffff',.9,{flatShading:true}),PT);ptrees.castShadow=true;
-  let pp=0;guard=0;
-  while(pp<PT&&guard<9000){guard++;
-    const pk=PLAN.parks[(rnd()*PLAN.parks.length)|0];let mnx=1e9,mxx=-1e9,mny=1e9,mxy=-1e9;pk.forEach(([a,b])=>{mnx=Math.min(mnx,a);mxx=Math.max(mxx,a);mny=Math.min(mny,b);mxy=Math.max(mxy,b)});
-    const x=mnx+rnd()*(mxx-mnx),y=mny+rnd()*(mxy-mny);
-    if(!pip(x,y,pk)||polyD(x,y,pk,true)<1.8)continue;
-    const r=1.3+rnd()*1.4;sv.set(r,r*1.15,r);pv.set(x,r*1.25+.25,-y);q.identity();m4.compose(pv,q,sv);ptrees.setMatrixAt(pp,m4);
-    col.set(['#4f9a50','#3f8a48','#5aa55a'][(rnd()*3)|0]);ptrees.setColorAt(pp,col);pp++}
-  ptrees.count=pp;scene.add(ptrees);
-
-  // homesites + homes
-  const wallMat=std('#efe9dc',.8),roofMat=std('#262c2f',.7),porchMat=std('#8a6745',.8),terrMat=std('#d8c9a5',.9);
-  const glassMat=std('#9fc4cf',.15,{metalness:.2,emissive:'#244a55',emissiveIntensity:.25});
-  function house(){
-    const g=new THREE.Group();const HW=12,HD=16;
-    const b=new THREE.Mesh(new THREE.BoxGeometry(HW,3.6,HD),wallMat);b.position.y=1.8;b.castShadow=true;b.receiveShadow=true;g.add(b);
-    const r=new THREE.Mesh(new THREE.ConeGeometry(1,1,4,1),roofMat);r.rotation.y=Math.PI/4;r.scale.set(HW/Math.SQRT2*1.16,3.6,HD/Math.SQRT2*1.12);r.position.y=3.6+1.8;r.castShadow=true;g.add(r);
-    const p=new THREE.Mesh(new THREE.BoxGeometry(HW,.35,3),porchMat);p.position.set(0,.18,HD/2+1.5);p.receiveShadow=true;g.add(p);
-    const t=new THREE.Mesh(new THREE.BoxGeometry(HW-1,.25,3.4),terrMat);t.position.set(0,.12,-HD/2-1.7);g.add(t);
-    const w=new THREE.Mesh(new THREE.BoxGeometry(7,1.9,.2),glassMat);w.position.set(0,1.9,HD/2+.05);g.add(w);
-    return g;
-  }
-  function label(n,founder){
-    const c=document.createElement('canvas');c.width=c.height=128;const x=c.getContext('2d');
-    x.fillStyle=founder?'#e3d3ae':'#f5f2ea';x.beginPath();x.arc(64,64,56,0,7);x.fill();
-    x.fillStyle='#04120c';x.font='600 58px -apple-system,BlinkMacSystemFont,"Hanken Grotesk",sans-serif';x.textAlign='center';x.textBaseline='middle';x.fillText(n,64,68);
-    const tx=new THREE.CanvasTexture(c);tx.colorSpace=THREE.SRGBColorSpace;
-    const s=new THREE.Sprite(new THREE.SpriteMaterial({map:tx,transparent:true,depthWrite:false,opacity:0}));s.scale.set(6,6,1);s.renderOrder=10;return s;
-  }
-  // text tags for the creek, the private trail and the entrance (redrawn on language change)
-  const tags=[];
-  function tag(key,x,y,h,w){
-    const c=document.createElement('canvas');c.width=1024;c.height=128;const tx=new THREE.CanvasTexture(c);tx.colorSpace=THREE.SRGBColorSpace;
-    const s=new THREE.Sprite(new THREE.SpriteMaterial({map:tx,transparent:true,depthWrite:false,depthTest:false,opacity:0}));s.scale.set(w,w/8,1);s.position.copy(V(x,y,h));s.renderOrder=12;scene.add(s);
-    const o={key,c,tx,s};tags.push(o);paintTag(o);return o;
-  }
-  function paintTag(o){
-    const x=o.c.getContext('2d');x.clearRect(0,0,1024,128);const t=I.S().tags[o.key];
-    x.font='600 50px -apple-system,BlinkMacSystemFont,"Hanken Grotesk",sans-serif';const w=Math.min(1000,x.measureText(t).width+70);
-    x.fillStyle='rgba(4,18,12,.78)';const r=40,X=(1024-w)/2,Y=24,H=80;x.beginPath();x.moveTo(X+r,Y);x.arcTo(X+w,Y,X+w,Y+H,r);x.arcTo(X+w,Y+H,X,Y+H,r);x.arcTo(X,Y+H,X,Y,r);x.arcTo(X,Y,X+w,Y,r);x.fill();
-    x.fillStyle='#f5f2ea';x.textAlign='center';x.textBaseline='middle';x.fillText(t,512,66);o.tx.needsUpdate=true;
-  }
-  const tm=PLAN.trail[Math.floor(PLAN.trail.length/2)],cm=PLAN.creek[18];
-  tag('trail',tm[0],tm[1]-8,10,100);tag('creek',cm[0]+22,cm[1],12,72);tag('entry',PLAN.gate[0]-40,PLAN.gate[1]-14,10,80);
-  I.on(()=>tags.forEach(paintTag));
-
-  const lotObjs=[];const pickables=[];
-  order.forEach((l,k)=>{
-    const founder=FOUNDER.has(l.id);
-    const base=l.side==='creek'?'#4d8f5f':'#3a7350';
-    const geo=flat(new THREE.ExtrudeGeometry(shapeOf(l.poly),{depth:.9,bevelEnabled:false}));
-    const mat=std(base,.95,{transparent:true,opacity:0,emissive:founder?'#c9b27e':'#000000',emissiveIntensity:0});
-    const mesh=new THREE.Mesh(geo,mat);mesh.receiveShadow=true;mesh.visible=false;scene.add(mesh);pickables.push(mesh);
-    const edge=new THREE.Line(new THREE.BufferGeometry().setFromPoints(l.poly.map(p=>V(p[0],p[1],.95))),new THREE.LineBasicMaterial({color:founder?'#e3d3ae':'#f5f2ea',transparent:true,opacity:0}));scene.add(edge);
-    const h=house();h.position.copy(V(l.house[0],l.house[1],.9));
-    h.rotation.y=Math.atan2(Math.cos(l.face),-Math.sin(l.face));h.visible=false;scene.add(h);
-    const lab=label(l.id,founder);lab.position.copy(V(l.house[0],l.house[1],14));scene.add(lab);
-    lotObjs.push({l,mesh,mat,edge,h,lab,founder,k,pos:V(l.house[0],l.house[1],0)});
-  });
-
-  // camera
-  const target=new THREE.Vector3(),camPos=new THREE.Vector3(),tmp=new THREE.Vector3();
-  function keys(aspect){
-    const desk=aspect>1.1;const tv=Math.tan(36*Math.PI/360);let endLook,endPos;
-    if(desk){ // plan lies horizontally, entrance on the left
-      const wVis=Math.max(440/0.7,190*aspect);const dist=wVis/2/(tv*aspect);
-      endLook=new THREE.Vector3(-10,0,-195+0.205*wVis);endPos=endLook.clone().add(new THREE.Vector3(dist*.36,dist*.93,0));
-    }else{
-      const dist=Math.max(430/2/tv,230/2/tv/aspect)*1.02;
-      endLook=new THREE.Vector3(-15,0,-165);endPos=endLook.clone().add(new THREE.Vector3(0,dist*.94,dist*.34));
-    }
-    return [
-      {p:0,pos:new THREE.Vector3(55,38,45),look:new THREE.Vector3(-8,0,-55)},
-      {p:.45,pos:new THREE.Vector3(200,185,-90),look:new THREE.Vector3(-20,0,-200)},
-      {p:1,pos:endPos,look:endLook}
-    ];
-  }
-  let K=keys(16/9);
-  const drag={on:false,x:0,y:0,yaw:0,pitch:0,ty:0,tp:0};
-  pc.addEventListener('pointerdown',e=>{drag.on=true;drag.x=e.clientX;drag.y=e.clientY;pc.setPointerCapture(e.pointerId);pc.style.cursor='grabbing'});
-  pc.addEventListener('pointerup',()=>{drag.on=false;pc.style.cursor='grab'});
-  const ray=new THREE.Raycaster(),mv=new THREE.Vector2();const tip=document.getElementById('tip');let hovered=null;
-  function setHover(o){if(hovered&&hovered!==o){hovered.mat.emissive.set(hovered.founder?'#c9b27e':'#000');hovered.hl=false}hovered=o;if(o){o.mat.emissive.set('#9fd1a8');o.hl=true}}
-  pc.addEventListener('pointermove',e=>{
-    if(drag.on){drag.ty=clamp(drag.ty+(e.clientX-drag.x)*.004,-.9,.9);drag.tp=clamp(drag.tp+(e.clientY-drag.y)*.002,-.25,.35);drag.x=e.clientX;drag.y=e.clientY}
-    const r=pc.getBoundingClientRect();mv.x=(e.clientX-r.left)/r.width*2-1;mv.y=-(e.clientY-r.top)/r.height*2+1;ray.setFromCamera(mv,camera);
-    const hit=ray.intersectObjects(pickables.filter(m=>m.visible&&m.material.opacity>.5),false)[0];
-    if(hit){const o=lotObjs.find(x=>x.mesh===hit.object);setHover(o);const l=o.l,s=I.S();
-      tip.innerHTML=`<b>${s.lotShort} ${l.id}</b> · ${fmtArea(l.area)} · ${l.side==='creek'?s.creek:s.forest}${o.founder?' · '+s.founderShort:''}`;
-      tip.style.left=(e.clientX-r.left)+'px';tip.style.top=(e.clientY-r.top)+'px';tip.style.opacity=1}
-    else{tip.style.opacity=0;setHover(null)}
-  });
-  pc.addEventListener('pointerleave',()=>{tip.style.opacity=0;setHover(null)});
-  function resize(){const w=pc.clientWidth,h=pc.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();K=keys(w/h)}
-  resize();
-  const follow=new THREE.Vector3(0,0,-50);
-  function update(p,time){
-    const N=lotObjs.length;const r=clamp((p-.05)/.76)*N;
-    let a=K[0],b=K[1];if(p>K[1].p){a=K[1];b=K[2]}
-    const t=ease(clamp((p-a.p)/(b.p-a.p)));
-    camPos.lerpVectors(a.pos,b.pos,t);target.lerpVectors(a.look,b.look,t);
-    const cur=lotObjs[Math.min(N-1,Math.max(0,Math.floor(r)))].pos;follow.lerp(cur,.06);
-    const wgt=.32*Math.sin(Math.PI*clamp((p-.05)/.8));tmp.copy(follow).sub(target).multiplyScalar(wgt);target.add(tmp);camPos.add(tmp);
-    drag.yaw+=(drag.ty-drag.yaw)*.08;drag.pitch+=(drag.tp-drag.pitch)*.08;
-    const sph=new THREE.Spherical().setFromVector3(camPos.clone().sub(target));
-    sph.theta+=drag.yaw+(reduce?0:Math.sin(time*.00012)*.035);sph.phi=clamp(sph.phi+drag.pitch,.05,1.45);
-    camera.position.copy(target).add(new THREE.Vector3().setFromSpherical(sph));camera.lookAt(target);
-    lotObjs.forEach(o=>{
-      const lt=clamp(r-o.k);const e=1-Math.pow(1-lt,3);
-      o.mesh.visible=lt>0;o.mesh.position.y=-6*(1-e);o.mat.opacity=e;
-      o.edge.material.opacity=e*(o.founder?1:.7);o.edge.position.y=o.mesh.position.y;
-      if(o.founder&&!o.hl)o.mat.emissiveIntensity=lt>0?.18+.12*Math.sin(time*.003):0;
-      const ht=clamp((r-o.k-.35)/.65);o.h.visible=ht>0;const s=ht>0?Math.max(.001,easeOutBack(ht)):.001;o.h.scale.set(1,s,1);o.h.position.y=.9+(1-ht)*10;
-      o.lab.material.opacity=clamp((r-o.k-.6)/.4);
-    });
-    const ta=clamp((p-.82)/.08);tags.forEach(o=>o.s.material.opacity=o.key==='entry'?Math.max(ta,clamp(1-(p-.02)/.08)):ta);
-    setPanel(Math.min(N-1,Math.floor(r))-(r<=0?1:0));
-    planEl.classList.toggle('done',p>.86);
-    renderer.render(scene,camera);
-  }
-  return {resize,update};
-}
-try{
-  const test=document.createElement('canvas');
-  if(!(test.getContext('webgl2')||test.getContext('webgl')))throw new Error('no webgl');
-  R=buildPlan();
-}catch(err){planEl.classList.add('nogl');console.warn(err)}
-
-/* ---------- Rail ---------- */
-const rail=document.getElementById('rail');
-document.getElementById('railPrev').onclick=()=>rail.scrollBy({left:-rail.clientWidth*.8,behavior:'smooth'});
-document.getElementById('railNext').onclick=()=>rail.scrollBy({left:rail.clientWidth*.8,behavior:'smooth'});
-
-/* ---------- Form → WhatsApp handoff ---------- */
-const form=document.getElementById('form'),doneBox=document.getElementById('doneBox'),msgEl=document.getElementById('msg'),err=document.getElementById('formErr');
-let msgText='';
-form.addEventListener('submit',e=>{
-  e.preventDefault();const s=I.S();
-  const f=new FormData(form);const name=(f.get('name')||'').trim(),email=(f.get('email')||'').trim();
-  if(!name||!/^\S+@\S+\.\S+$/.test(email)){err.textContent=s.err;return}
-  err.textContent='';
-  const sel=id=>{const el=document.getElementById(id);return el.options[el.selectedIndex].text};
-  msgText=s.msg({name,email,country:(f.get('country')||'').trim(),look:sel('fLook'),when:sel('fWhen')});
-  msgEl.textContent=msgText;
-  document.getElementById('waLink').href='https://wa.me/50765348511?text='+encodeURIComponent(msgText);
-  form.style.display='none';doneBox.classList.add('on');
-});
-document.getElementById('copyBtn').addEventListener('click',async e=>{
-  const s=I.S();try{await navigator.clipboard.writeText(msgText);e.target.textContent=s.copied}catch{e.target.textContent=s.copyFail}
-});
-
-/* ---------- Main loop ---------- */
-function frame(time){
-  nav.classList.toggle('solid',scrollY>innerHeight*.6);
-  const st=document.getElementById('statement');const words=st.children;
-  const sr=st.getBoundingClientRect();const sp=clamp((innerHeight*.82-sr.top)/(sr.height+innerHeight*.3));
-  if(!reduce)for(let i=0;i<words.length;i++)words[i].style.opacity=(.26+.74*clamp(sp*words.length*1.15-i)).toFixed(3);
-  if(inView(orbit)){
-    const p=progress(orbit);zoom=reduce?1:zoomAt(p);drawFrame(Math.round(p*(N_FR-1)));updateAnchors(p);
-    oBar.style.width=(p*100).toFixed(1)+'%';oPct.textContent=Math.round(p*100)+'%';
-    caps.forEach(c=>c.classList.toggle('on',p>=+c.dataset.from&&p<+c.dataset.to));
-  }
-  if(R&&inView(planEl))R.update(reduce?1:progress(planEl),time);
-  requestAnimationFrame(frame);
-}
-function onResize(){sizeOrbit();drawFrame(Math.max(0,lastFrame),true);updateAnchors(progress(orbit));R&&R.resize()}
-addEventListener('resize',onResize);
-sizeOrbit();requestAnimationFrame(frame);
-</script>
+<script type="module" src="assets/js/app.js"></script>
 </body>
 </html>
