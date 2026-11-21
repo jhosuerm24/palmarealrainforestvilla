@@ -44,7 +44,7 @@ window.I18N=(function(){
     s4:'De pensión al mes califican para la visa de Pensionado.',s4s:'Con descuentos para jubilados en Panamá. Confirma los requisitos vigentes con tu abogado.',
     d2:'David y Federal Mall',d3:'Aeropuerto Enrique Malek (DAV)',dFine:'Tiempos aproximados en carro desde el portón.',
     faK:'¿Quién vende?',faH:'La familia <span class="it">Rivera.</span>',
-    faL:'<li>Tierra de nuestra familia, cultivada por generaciones.</li><li>Sin intermediarios. Tratas directamente con nosotros.</li><li>Camina el terreno con nosotros antes de decidir.</li><li>Trae a tu propio abogado.</li><li>Financiamiento familiar disponible.</li>',
+    faL:'<li>Tierra de nuestra familia, cultivada por generaciones.</li><li>Lo vende la familia. Habla directamente con nosotros cuando quieras.</li><li>Camina el terreno con nosotros antes de decidir.</li><li>Trae a tu propio abogado.</li><li>Financiamiento familiar disponible.</li>',
     faC:'Delys Rivera, en el terreno',
     rsK:'Lotes fundadores',rsH:'Solo 4 lotes <span class="it">fundadores.</span>',
     rsP:'Los primeros lotes, los más cercanos a la calle asfaltada, salen primero a precio de fundador. Únete a la lista de reserva y agendamos tu visita privada al terreno o una videollamada en vivo con nuestra familia.',
